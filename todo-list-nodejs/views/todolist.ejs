@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Todo List</title>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <h1>Todo List</h1>
+
+        <h3>Liste des tâches :</h3>
+        <ul>
+            <% tasks.forEach(task => { %>                
+                <% if (task.done){%>
+                    <li>
+                        <%= task.title %> | <a href="#">Terminé</a>
+                    </li>
+                <% } else {%>
+                    <li>
+                        <s><%=task.title %></s>| <a href="#">Supprimé</a>
+                    </li>
+                <% } %>
+
+            <%  }); %>
+        </ul>
+    </body>
+</html>
